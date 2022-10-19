@@ -39,34 +39,6 @@
                        0x41800000, 0xFF, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43430100, 0x28C5,
                        0x43400000, 0xFFFF, 0x4281C000, 2000" />
 
-   <!--app resume boost-->
-        <!-- SCHEDBOOST resource opcode, value-->
-        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
-        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
-        <!-- CPUBOOST_MAX_FREQ PRIME Core resource opcode, value-->
-        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
-        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
-        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
-        <!-- CPUBW_MIN_FREQ resource opcode, value-->
-        <!-- POWER COLLAPSE resource opcode, value-->
-        <!-- STORAGE CLK SCALING resource opcode, value-->
-        <!-- LLCCBW resource opcode, value-->
-        <!-- L3 resource opcode, value-->
-        <!-- GPU DISABLE resource opcode, value-->
-        <Config
-            Id="0x00001082" Type="1" Enable="true" Timeout="400" Target="kona"
-            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
-                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41818000, 0xFF,
-                       0x41800000, 0xFF, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43430100, 0x28C5,
-                       0x43400000, 0xFFFF, 0x4281C000, 2000" />
-
-        <Config
-            Id="0x00001082" Type="2" Enable="true" Timeout="400" Target="kona"
-            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
-                       0x40800000, 1497, 0x40800100, 1497, 0x40800200, 1766, 0x41818000, 0xFF,
-                       0x41800000, 0xFF, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43430100, 0x28C5,
-                       0x43400000, 0xFFFF, 0x4281C000, 2000" />
-
     <!--app lauch boost (disabling packing)-->
 
         <!-- Type="2", launch boost for disable packing 1.5sec -->
@@ -112,11 +84,11 @@
 
         <!-- Type="4", FA launch boost of 15sec -->
         <Config
-            Id="0x00001081" Type="4" Enable="true" Timeout="18000" Target="kona"
+            Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="kona"
             Resources="0x40C00000, 0x1, 0x40C58000, 0x2D, 0x40C54000, 0x41,
                        0x40C74000, 0xF0, 0x40408000, 0x63, 0x40C20000, 0x28,
                        0x40C1C000, 0x3C, 0x40C20200, 0x28, 0x40C1C200, 0x3C,
-                       0x42C10000, 0x1, 0x40800200, 0xFFF, 0x40800000, 0xFFF,
+                       0x42C10000, 0x1, 0x40800200, 0x76C, 0x40800000, 0x76C,
                        0x40800100, 0x4B0, 0x41800000, 0x50, 0x43000000, 0x3A,
                        0x43400000, 0x3480" />
 
@@ -164,44 +136,14 @@
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="kona" Fps="120"
-            Resources="0x43000000, 0x19, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
+            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40CA8000, 2" />
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="kona" Fps="144"
-            Resources="0x43000000, 0x19, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
+            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40CA8000, 2" />
-
-     <!--Horizontal Scroll boost-->
-        <!-- CPUBW_MIN_FREQ resource opcode, value-->
-        <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
-        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
-        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value -->
-        <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
-        <!-- LPM Bias resource opcode, value-->
-
-        <!-- Type="2", Horizontal Scroll boost -->
-        <Config
-            Id="0x00001080" Type="2" Enable="true" Target="kona" Fps="60"
-            Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 1516, 0x40800200, 1766,
-                       0x40C00000, 2, 0x40C74000, 0xFF, 0x40408000, 0x63" />
-
-        <Config
-            Id="0x00001080" Type="2" Enable="true" Target="kona" Fps="90"
-            Resources="0x43010000, 0x26, 0x40800000, 1651, 0x40800100, 1516, 0x40800200, 1766,
-                       0x40C00000, 2, 0x40C74000, 0xFF, 0x40408000, 0x63" />
-
-        <Config
-            Id="0x00001080" Type="2" Enable="true" Target="kona" Fps="120"
-            Resources="0x43010000, 0x26, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
-                       0x40C00000, 2, 0x40C74000, 0xFF, 0x40408000, 0x63" />
-
-        <Config
-            Id="0x00001080" Type="2" Enable="true" Target="kona" Fps="144"
-            Resources="0x43010000, 0x26, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
-                       0x40C00000, 2, 0x40C74000, 0xFF, 0x40408000, 0x63" />
 
     <!--Prefling Scroll boost-->
         <!-- LLCBW_MIN_FREQ resource opcode, value-->
@@ -229,33 +171,27 @@
                        0x41000000, 3" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="kona" Fps="120"
-            Resources="0x43000000, 0x19, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
+            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40CA8000, 2" />
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="80" Target="kona" Fps="144"
-            Resources="0x43000000, 0x19, 0x40800000, 1900, 0x40800100, 1516, 0x40800200, 1862,
+            Resources="0x43000000, 0x19, 0x40800000, 1000, 0x40800100, 1000, 0x40800200, 1000,
                        0x40C00000, 0x2, 0x43400000, 0x1F40, 0x40C74000, 0xFF, 0x40408000, 0x63,
                        0x41000000, 3, 0x40CA8000, 2" />
 
 	<!--MTP boost-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- CPUBOOST_MAX_FREQ PRIME Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
-        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
-        <!-- CPUBW_MIN_FREQ resource opcode, value-->
-        <!-- DISABLE_POWER_COLLAPSE resource opcode, value-->
-        <!-- STORAGE CLK SCALING resource opcode, value-->
 
         <!-- Type="", MTP boost -->
         <Config
             Id="0x00001086" Enable="true" Target="kona"
-            Resources="0x40C00000, 0x1, 0x40804200, 0xFFF, 0x40804000, 0xFFF, 0x40804100, 0xFFF,
-                        0x40800200, 0xFFF, 0x40800000, 0xFFF, 0x40800100, 0xFFF,
-                        0x41800000, 140, 0x40400000, 0x1, 0x42C10000, 0x1" />
+            Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 1800,
+                       0x40800100, 1400" />
 
     <!--Drag boost-->
         <!-- LLCBW_MIN_FREQ resource opcode, value-->
@@ -331,7 +267,7 @@
 
         <Config
             Id="0x00001090" Enable="true" Timeout="1000" Target="kona"
-            Resources="0x40800100, 1324, 0x42804000, 0" />
+            Resources="0x40800100, 1000, 0x42804000, 0" />
 
     <!--Performance mode-->
         <!-- SCHEDTUNE_BOOST -->
@@ -358,29 +294,6 @@
         <Config
                 Id="0x00001040" Enable="true" Timeout="0" Target="kona"
                 Resources="0x40000000, 0x0" />
-    <!--XiaoMi bluetooth boost-->
-        <!-- SCHEDBOOST resource opcode, value-->
-        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
-        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
-        <!-- CPUBOOST_MAX_FREQ PRIME Core resource opcode, value-->
-        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
-        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
-        <!-- CPUBOOST_MIN_FREQ PRIME Core resource opcode, value-->
-        <!-- CPUBW_MAX_FREQ resource opcode, value-->
-        <!-- CPUBW_MIN_FREQ resource opcode, value-->
-        <!-- POWER COLLAPSE resource opcode, value-->
-        <!-- STORAGE CLK SCALING resource opcode, value-->
-        <!-- LLCC DDR LAT CPU0 MIN FREQ resource opcode, value-->
-        <!-- L3 resource opcode, value-->
-        <!-- GPU DISABLE resource opcode, value-->
-
-        <!-- Type="1", bluetooth boost of 3sec-->
-        <Config
-                Id="0x000011C0" Type="1" Enable="true" Timeout="3000" Target="kona"
-                Resources="0x40C00000, 0x1, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40804200, 0xFFF,
-                       0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40800200, 0xFFF, 0x41818000, 0xFF,
-                       0x41800000, 0xFF, 0x40400000, 0x1, 0x42C10000, 0x1, 0x43430100, 0x28C5,
-                       0x43400000, 0xFFFF, 0x4281C000, 2000" />
 
     <!--FPS Update from Framework-->
         <!-- SCHED_WINDOW_TICKS_UPDATE resource opcode, value -->
