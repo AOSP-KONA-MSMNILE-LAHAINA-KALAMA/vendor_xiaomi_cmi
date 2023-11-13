@@ -6,6 +6,7 @@ PRODUCT_SOONG_NAMESPACES += \
     vendor/xiaomi/cmi
 
 PRODUCT_COPY_FILES += \
+    vendor/xiaomi/cmi/proprietary/vendor/etc/displayconfig/display_id_4630947134992368257.xml:$(TARGET_COPY_OUT_VENDOR)/etc/displayconfig/display_id_4630947134992368257.xml \
     vendor/xiaomi/cmi/proprietary/product/etc/permissions/UimGba.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGba.xml \
     vendor/xiaomi/cmi/proprietary/product/etc/permissions/UimGbaManager.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimGbaManager.xml \
     vendor/xiaomi/cmi/proprietary/product/etc/permissions/UimService.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/UimService.xml \
